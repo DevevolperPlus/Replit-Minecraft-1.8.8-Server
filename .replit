@@ -1,0 +1,9 @@
+run = "ssh -o StrictHostKeyChecking=no -R $RANDOM:localhost:25565 serveo.net & java -Xmx512M -jar server.jar"
+entrypoint = "a0.2.1.jar"
+
+[nix]
+channel = "stable-23_11"
+
+[[ports]]
+localPort = 25565
+externalPort = 80
